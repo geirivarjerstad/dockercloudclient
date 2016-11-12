@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+  bymeldingclient:
+    build:
+      context: .
+      dockerfile: Dockerfile  
+    volumes:
+      - ./app/public:/app/public
+      - ./app/src:/app/src      
+      - ./app/package.json:/app/package.json      
+    entrypoint: tail -f /dev/null
+    links: 
+      - bymeldingclient-npminstall
+    ports: 
+      - 3000:3000
+  bymeldingclient-npminstall:
+    build:
+      context: .
+      dockerfile: Dockerfile.NpmInstall     

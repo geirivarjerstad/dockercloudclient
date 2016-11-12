@@ -1,0 +1,5 @@
+FROM bymdocker/bymeldingclient-npminstall
+ARG source=./app
+WORKDIR /app
+EXPOSE 80 3000
+COPY $source .

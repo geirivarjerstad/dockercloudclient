@@ -1,0 +1,5 @@
+For å unngå at man må installere node_modules hver eneste gang man sletter BymeldingClient, 
+så kan man første gangen kjøre NPM INSTALL på APP og deretter kopiere ut node_modules på utsiden av prosjektet og deretter lage en symbolsk link inn i /app/node_modules.
+
+Hvis man sletter BymeldingClient igjen så kjør bare "mklink_node_modules.bat" under for å linke inn node_modules inn i /app/.
+

@@ -1,0 +1,20 @@
+
+For å kjøre lokalt med kompilert image fra Docker Hub, åpne elevated CMD og kjør
+
+docker-compose up -d --build
+
+For å kjøre npm kommandoer eller se på filer, kan du logge deg inn på containeren slik:
+
+docker exec -it bymeldingclient_bymeldingclient_1 /bin/bash
+
+Gitt at  bymeldingclient_bymeldingclient_1 er riktig. Kjør Docker ps for å se kjørende containere.
+
+Ved endring på prosjekt.json, først sjekk inn endringer, deretter gå til Docker Hub https://hub.docker.com/r/bymdocker/bymeldingclient-npm-install/~/settings/automated-builds/
+og trykk på Trigger for å sette igang en ny build. 
+
+ELLER 
+
+kjør fullstendig lokalt 
+
+docker-compose up -f docker-compose.local.yml -d --build 
+
